@@ -1,0 +1,83 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    font-size: xx-large;
+    font-family: 'Times New Roman', Times, serif;
+    margin: 50px;
+}
+
+.grid-calculator {
+    display: grid;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: minmax(100px, auto) repeat(5, 80px);
+    background-color: black;
+    border: 12px solid black;
+    border-radius: 8px;
+    padding: 10px;
+    height: 500px;
+    width: 400px;
+    gap: 2px;
+}
+
+.screen {
+    grid-column: 1/ -1;
+    background-color: aqua;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-end;
+    border-radius: 8px;
+    margin-bottom: 5px;
+    padding: 5px;
+}
+
+.accumulator {
+    height: 37px;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.currentValue {
+    height: 57px;
+    font-size: 50px;
+    font-weight: bold;
+}
+
+button {
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 4px;
+}
+
+.operator, .equals {
+    background-color: orange;
+    color: white;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.number {
+    background-color: dimgray;
+    color: white;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.clear, .delete {
+    background-color: lightgray;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.clear {
+    grid-column: span 2;
+}
+
+#zero {
+    grid-column: span 2;
+}
